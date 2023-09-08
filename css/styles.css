@@ -33,6 +33,7 @@
   
   --- 06 BORDER-RADIUS
   Default: 8px
+  12px
   
   --- 07 WHITESPACE
 
@@ -238,8 +239,28 @@ body {
   place-items: center;
 }
 
-.step-img-bg {
+.step-img-box::before,
+.step-img-box::after {
+  content: '';
+  display: block;
+  border-radius: 50%;
   position: absolute;
+}
+
+.step-img-box::before {
+  width: 60%;
+  /* height: 60%; */
+
+  /* 60% of parent's width */
+  padding-bottom: 60%;
+
+  background-color: #fdf2e9;
+}
+
+.step-img-box::after {
+  width: 45%;
+  padding-bottom: 45%;
+  background-color: #fae5d3;
 }
 
 .step-img {
@@ -248,41 +269,112 @@ body {
 }
 
 /* ********************************* */
-
-/* ********************************* */
-/* HELPER CLASSES */
+/* MEALS SECTION */
 /* ********************************* */
 
-.mr-sm {
-  margin-right: 1.6rem;
+.section-meals {
+  padding: 9.6rem 0;
 }
 
-.container {
-  /* 1140px */
-  max-width: 120rem;
-  padding: 0 3.2rem;
-  margin: 0 auto;
+.meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s;
 }
 
-.grid {
-  display: grid;
-  column-gap: 6.4rem;
-  row-gap: 9.6rem;
+.meal:hover {
+  transform: translateY(-2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 }
 
-.grid--center-v {
+.meal-content {
+  padding: 4.8rem;
+  padding-top: 3.2rem;
+}
+
+.meal-tags {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #333;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.tag--vegetarian {
+  background-color: #51cf66;
+}
+
+.tag--vegan {
+  background-color: #94d82d;
+}
+
+.tag--paleo {
+  background-color: #ffd43b;
+}
+
+.meal-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.meal-attributes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.meal-attribute {
+  font-size: 1.8rem;
+  display: flex;
   align-items: center;
+  gap: 1.6rem;
 }
 
-.grid--2-cols {
-  grid-template-columns: repeat(2, 1fr);
+.meal-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #e67e22;
 }
 
-.grid--3-cols {
-  grid-template-columns: repeat(3, 1fr);
+.meal-img {
+  width: 100%;
 }
 
-.grid--4-cols {
-  grid-template-columns: repeat(4, 1fr);
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
 }
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
+
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
 /* ********************************* */
