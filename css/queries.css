@@ -70,7 +70,7 @@ Instead, 1rem = 1em = 16px */
 
   .hero {
     grid-template-columns: 1fr;
-    padding: 0 8rem;
+    padding: 6rem 8rem;
     gap: 6.4rem;
   }
 
@@ -246,7 +246,7 @@ Instead, 1rem = 1em = 16px */
   }
 
   .hero {
-    padding: 0 3.2rem;
+    padding: 8rem 3.2rem;
   }
 
   .hero-img {
