@@ -184,6 +184,10 @@ Instead, 1rem = 1em = 16px */
 /* BELOW 704px (Smaller Tablets) */
 /* ********************************* */
 @media (max-width: 44em) {
+  .sticky {
+    width: 94%;
+  }
+
   .grid--3-cols,
   .grid--4-cols {
     grid-template-columns: repeat(2, 1fr);

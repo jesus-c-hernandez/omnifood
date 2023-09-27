@@ -58,6 +58,19 @@
   position: relative;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 96%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 2;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
 .logo {
   height: 2.2rem;
 }
@@ -135,7 +148,7 @@
 .hero {
   max-width: 130rem;
   margin: 0 auto;
-  padding: 0 3.2rem;
+  padding: 4.8rem 3.2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 9.6rem;
